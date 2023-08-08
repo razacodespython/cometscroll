@@ -41,6 +41,7 @@ const {
   COINMARKETCAP_API_KEY,
   ETH_PK = '',
   ETHERSCAN_KEY,
+  SCROLLSCAN_KEY,
   SNOWTRACE_KEY,
   POLYGONSCAN_KEY,
   ARBISCAN_KEY,
@@ -74,7 +75,8 @@ export function requireEnv(varName, msg?: string): string {
   'INFURA_KEY',
   'POLYGONSCAN_KEY',
   'ARBISCAN_KEY',
-  'LINEASCAN_KEY'
+  'LINEASCAN_KEY',
+  'SCROLLSCAN_KEY'
 ].map(v => requireEnv(v));
 
 // Networks
@@ -99,7 +101,7 @@ const networkConfigs: NetworkConfig[] = [
   {
     network: 'scroll',
     chainId: 534353,
-    url: `https://scroll-alphanet.public.blastapi.io`,
+    url: `https://sepolia-rpc.scroll.io/`,
   },
   {
     network: 'arbitrum',
@@ -212,7 +214,7 @@ const config: HardhatUserConfig = {
       ropsten: ETHERSCAN_KEY,
       rinkeby: ETHERSCAN_KEY,
       goerli: ETHERSCAN_KEY,
-      scroll:'abc',
+      scroll: SCROLLSCAN_KEY,
       // Avalanche
       avalanche: SNOWTRACE_KEY,
       avalancheFujiTestnet: SNOWTRACE_KEY,
@@ -244,8 +246,8 @@ const config: HardhatUserConfig = {
         network: 'scroll',
         chainId: 534353,
         urls: {
-          apiURL: 'https://blockscout.scroll.io/api',
-          browserURL: 'https://blockscout.scroll.io'
+          apiURL: 'https://sepolia-blockscout.scroll.io/api',
+          browserURL: 'https://sepolia-blockscout.scroll.io/'
         }
       },
       {

@@ -37,7 +37,7 @@ export default async function deploy(
     'linea-goerli'
   );
 
-  // Deploy LineaBridgeReceiver
+  // Deploy LineaBridgeReceiver check on scroll side
   const bridgeReceiver = await deploymentManager.deploy(
     'bridgeReceiver',
     'bridges/linea/LineaBridgeReceiver.sol',
