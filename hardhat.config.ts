@@ -100,7 +100,7 @@ const networkConfigs: NetworkConfig[] = [
   },
   {
     network: 'scroll',
-    chainId: 534353,
+    chainId: 534351,
     url: `https://sepolia-rpc.scroll.io/`,
   },
   {
@@ -244,7 +244,7 @@ const config: HardhatUserConfig = {
       {
         // Hardhat's Etherscan plugin calls the network `arbitrumOne`, so we need to add an entry for our own network name
         network: 'scroll',
-        chainId: 534353,
+        chainId: 534351,
         urls: {
           apiURL: 'https://sepolia-blockscout.scroll.io/api',
           browserURL: 'https://sepolia-blockscout.scroll.io/'
